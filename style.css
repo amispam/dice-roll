@@ -1,0 +1,77 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(59, 71, 59);
+    color:lime;
+    background-image: url("images/background.jpg");
+    background-size:cover;
+    background-blend-mode: lighten;
+}
+@media (max-width:499px){
+    .result{
+        text-align:center;
+        font-size:2rem;
+        font-family:fantasy;
+        font-weight:normal;
+      }
+}
+
+@media (min-width:500px){
+    .result{
+        text-align:center;
+        font-size:3.5rem;
+        font-family:fantasy;
+        font-weight:normal;
+      }
+}
+
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent{
+    width:60vh;
+    height:60vh;
+    display:grid;
+    grid-template: 0.3fr 1fr/ 1fr 1fr;
+    gap:5px;
+    background-color:rgba(0,0,0,0.8);
+    padding:5px;
+  }
+  .parent div{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .firstRow{
+    font-weight:bold;
+    font-size:1.4rem;
+    color:rgba(155,155,155);
+    background-color:rgb(30, 30, 29);
+    font-family:cursive;
+  }
+
+  .dice1, .dice2{
+    background-color:rgb(56, 10, 10);
+  }
+
+  .blur{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(255,0,0,0.8);
+    animation:flash 1.5s infinite;
+  }
+
+  @keyframes flash{
+    0%{background-color: rgba(255,255,255,0.1);}
+    100%{background-color: rgba(255,0,0,0.8);}
+  }
+
+  .hideme{
+    display:none;
+  }
